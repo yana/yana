@@ -173,8 +173,9 @@
         </p>
         <p>A YANA model is a specification of your world. It's the model of your world state.   You can't represent the world as it is because it's always changing but you can represent the  way you want the world to be.  YANA let's you create an a-priori definition of expected state.  With YANA you can specify environmental state or represent state definitions be they about configurations, properties, dependencies, etc. Tools can be controlled by the state in the YANA model or even change the model's state.
         </p>
-
-
+        <p>
+        YANA is not unique as a node authority. There are many <a href="#others">other node authorities</a>.
+        </p>
         
       </div>
     </div>
@@ -247,7 +248,8 @@
                 </ul>
                 -->
           </div><div class="span5">
-            <p>The YANA model does not prescribe a particular standard. YANA only provides a very basic set of modeling concepts that help you define an object graph using a type system. Objects are called "nodes" in the YANA model. Each node is defined by its "type", which is in turn defined in terms of "attributes". Nodes in the model connect through "relationships". Relationships dictate the patterns of connection between "parent" and "child" nodes.</p>
+            <p>The YANA model does not prescribe a particular standard. For example, it does not provide a schema for an ITIL CMDB
+              or implement a standard from DMTF. YANA only provides a very basic set of modeling concepts that help you define an object graph using a type system. Objects are called "nodes" in the YANA model. Each node is defined by its "type", which is in turn defined in terms of "attributes". Nodes in the model connect through "relationships". Relationships dictate the patterns of connection between "parent" and "child" nodes.</p>
           </div>
 
         </div>
@@ -262,10 +264,10 @@
                 </ul>
                 -->
           </div><div class="span5">
-            <p>More and more automation tools need information about the hosts in their infrastructure.
-              The control of execution is often governed by selecting hosts based on class membership
+            <p>More and more automation tools, like MCollective, Chef/Knife, Salt, Fabric, need information about the hosts in their infrastructure.
+              The location of execution is often governed by selecting hosts based on class membership
               or attribute. Rather than maintain this host inventory in scripted code, a YANA
-              model can be used to independently represent the host information and provide it to tools. 
+              model can be used to independently represent the host information and provide it back to tools. 
               YANA also
               supports a formalized process to define and control the model's evolution friendly with an SDLC.
             </p>
@@ -285,7 +287,7 @@
           </div><div class="span5">
             <p>Monitoring tools need to help you know if a business service is really
               up. YANA helps you describe the business service in terms of interconnected
-              objects. Monitoring tools can use YANA models to correlate and learn about dependencies.
+              objects. Monitoring tools like Nagios can use YANA models to correlate and learn about dependencies.
               Infrastructure changes fast (especially in virtual ones) so the YANA model
               is easy to change, but in a way that stays in step with your
               management tools.
@@ -340,7 +342,9 @@
 
       <div class="span12">
 
-        <h1>Modeling with YANA</h1>
+        <div class="span12"><h1>Modeling with YANA</h1></div>
+        <div class="span11"><hr/></div>
+        <div class="span11">
 
         <p>YANA only gives you a basic set of objects to specify things in your domain: Nodes, Types, Attributes and Relationships. </p>
 
@@ -442,7 +446,7 @@
         </p>
 
 
-
+        <div id="others">
         <h3>Other Node Authorities</h3>
         <p>YANA is not unique as a Node Authority. There are many other tools and services
           that support maintaining a node model. For example, configuration management tools
@@ -483,7 +487,7 @@
           provides basic CRUD, import/export, and access control. You can use YANA as
           a generic node model representation when you need to share specifications between one or more tools.
         </p>
-
+        </div>
       </div>
     </div>
     <div id="opensource" class="container clearfix">
