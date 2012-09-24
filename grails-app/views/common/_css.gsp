@@ -1,10 +1,4 @@
 <style type="text/css">
-body {
-    background: url('${resource(dir: 'images', file: 'yana_bg.png')}') repeat;
-}
-#header{
-    background-image: url('${resource(dir: 'images', file: 'header_bg.gif')}');
-}
 .logo{
     background: url('${resource(dir: 'images', file: 'yana_logo1.png')}') no-repeat;
 }

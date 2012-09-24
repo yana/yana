@@ -1,6 +1,5 @@
 body {
    background-color:#f9f9f9;
-   background: url(../images/yana_bg.png) repeat;
    font-family: "Helvetica";
    font: 13px verdana, arial, helvetica, sans-serif;  
    color:#000000;
@@ -63,22 +62,16 @@ html,body,#fullheightcontainer,#wrapper,* html #wrapper,#outer{background:#f9f9f
 #subheader1,#subheader2,#subheader3,#subheader4,#subheader5,#subfooter1,#subfooter2,#subfooter3,#subfooter4{text-align:center;overflow:hidden}
 .outer_horiz_border,.sb_outer_horiz_border,#headergap,#clearheadercenter,#clearheaderleft,#clearheaderright,#clearfootercenter,#clearfooterleft,#clearfooterright,.bottomtopmargin{overflow:hidden}
 
-#header {
-   position:absolute;
-   top:-68px; 
-   background-image: url("../images/header_bg.gif");
-   background-position:bottom; 
-   background-size:1px 59px;
-   background-repeat: repeat-x;
-   height: 100px; /* needs to match the height of the background image */
+#header .topbar{
    background-color:#fefefe;
-   width: 100% !important; 
+   width: 100% !important;
+    border-bottom: 2px solid black;
 } 
  
 #body { 
    width: 100%; 
    background:#f9f9f9; 
-   padding-top:100px;   /* Height of the footer */
+   padding-top:50px;   /* Height of the footer */
    padding-bottom:51px;   /* Height of the footer */
    font-family: "Helvetica";
    font: 13px verdana, arial, helvetica, sans-serif !important; 
@@ -110,25 +103,19 @@ html,body,#fullheightcontainer,#wrapper,* html #wrapper,#outer{background:#f9f9f
 } 
  
 .logo{
-        position: absolute; 
-        top: 63px; 
         background: url(../images/yana_logo1.png) no-repeat;
-        height:32px;
-        width:145px;
+        height:46px;
+        width:106px;
 } 
  
 .header_spacer { 
-        position: absolute; 
-        top: 61px; 
-        left: 159px;  
+        left: 159px;
 } 
  
 .header_search { 
-        position: absolute;
-        top: 63px; 
         width: 40%;
-        left: 350px; 
-} 
+    text-align: right;
+}
 
 .header_login{
         height:27px;
@@ -136,15 +123,13 @@ html,body,#fullheightcontainer,#wrapper,* html #wrapper,#outer{background:#f9f9f
 }
 
 .header_login_body{ 
-        position: absolute; 
-        top: 70px; 
         background-color:#fefefe;
         font-family: "Helvetica";
         font: 10px verdana, arial, helvetica, sans-serif;       
         width:223px;
         height:25px;
-} 
- 
+}
+
 input[type=text] {
     border: 1px solid #777777;
     background: #ffffff;
@@ -495,7 +480,6 @@ ul li .property-value {
 /*breadcrumbs */
 
 div.breadcrumbs{
-    width: 400px;
     font: bold 12px Helvetica, Arial, sans-serif;
     padding: 0px 5px 3px 5px;
 }
