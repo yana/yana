@@ -1,4 +1,4 @@
-<%@ page import="com.dtolabs.Webhook" %>
+<%@ page import="org.yana.Webhook" %>
 
 
 

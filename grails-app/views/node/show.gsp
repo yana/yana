@@ -1,6 +1,6 @@
 
-<%@ page import="com.dtolabs.Node" %>
-<%@ page import="com.dtolabs.NodeTypeRelationship" %>
+<%@ page import="org.yana.Node" %>
+<%@ page import="org.yana.NodeTypeRelationship" %>
 
 <!doctype html>
 <html>
@@ -54,7 +54,7 @@
 								<table width=100%>
 									<g:if test="${nodeInstance?.nodeValues}">
 		                                <g:set var="nvalues" value="${nodeInstance.nodeValues.collectEntries {[it.name,it.value]}}"/>
-										<g:each in="${com.dtolabs.NodeAttribute.findAllByNodetype(nodeInstance.nodetype, [sort:'attribute.name',order:'asc'])}" status="i" var="t">
+										<g:each in="${org.yana.NodeAttribute.findAllByNodetype(nodeInstance.nodetype, [sort:'attribute.name',order:'asc'])}" status="i" var="t">
 										<g:set var="attribute" value="${t.attribute}" />
 
 										<tr>

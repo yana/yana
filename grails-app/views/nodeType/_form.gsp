@@ -1,4 +1,4 @@
-<%@ page import="com.dtolabs.NodeType" %>
+<%@ page import="org.yana.NodeType" %>
 
 
 
@@ -34,7 +34,7 @@
 <ul class="one-to-many">
 
 <g:each in="${nodeTypeInstance?.attributes?}" var="a">
-	<g:set var="attributeInstance" value="${com.dtolabs.Attribute.get(a.attribute.id)}"/>
+	<g:set var="attributeInstance" value="${org.yana.Attribute.get(a.attribute.id)}"/>
     <li><g:link controller="NodeAttribute" action="show" id="${a.id}">${attributeInstance.name} [${attributeInstance.filter.dataType}]</g:link></li>
 </g:each>
 </ul>

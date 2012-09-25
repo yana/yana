@@ -1,4 +1,4 @@
-<%@ page import="com.dtolabs.Filter" %>
+<%@ page import="org.yana.Filter" %>
 <!doctype html>
 <html>
 	<head>

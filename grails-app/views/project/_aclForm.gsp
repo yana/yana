@@ -1,4 +1,4 @@
-<%@ page import="com.dtolabs.org.yana.YanaConstants; com.dtolorg.yana2ana2.springacl.YanaPermission; com.dtolabs.Project" %>
+<%@ page import="org.yana.YanaConstants; org.yana.springacl.YanaPermission; org.yana.Project" %>
 
 <div >
     <div>
@@ -12,7 +12,7 @@
                 <span class="permissionName" id="permName"></span>
                 <g:textField id="recipient" name="recipient" value="" placeholder="Username or ROLE_*"
                              autocomplete='off'/>
-                <g:select name="permission" from="${YanaPermission.byName.keySet()}"/>
+                <g:select name="permission" from="${org.yana.springacl.YanaPermission.byName.keySet()}"/>
                 <input type="button"  class="grantCancelButton" name="cancel" value="Cancel"/>
                 <g:submitButton name="Save" />
             </fieldset>

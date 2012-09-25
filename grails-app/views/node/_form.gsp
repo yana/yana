@@ -1,4 +1,4 @@
-<%@ page import="com.dtolabs.Node" %>
+<%@ page import="org.yana.Node" %>
 
 
 
@@ -23,7 +23,7 @@
 		<g:message code="node.template.label" default="Template" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="template" name="template.id" from="${com.dtolabs.Template.list()}" optionKey="id" required="" value="${nodeInstance?.template?.id}" class="many-to-one"/>
+	<g:select id="template" name="template.id" from="${org.yana.Template.list()}" optionKey="id" required="" value="${nodeInstance?.template?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: nodeInstance, field: 'tags', 'error')} ">
@@ -39,7 +39,7 @@
 		<g:message code="node.nodetype.label" default="Nodetype" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="nodetype" name="nodetype.id" from="${com.dtolabs.NodeType.list()}" optionKey="id" required="" value="${nodeInstance?.nodetype?.id}" class="many-to-one"/>
+	<g:select id="nodetype" name="nodetype.id" from="${org.yana.NodeType.list()}" optionKey="id" required="" value="${nodeInstance?.nodetype?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: nodeInstance, field: 'parent', 'error')} ">
@@ -47,7 +47,7 @@
 		<g:message code="node.parent.label" default="Parent" />
 		
 	</label>
-	<g:select id="parent" name="parent.id" from="${com.dtolabs.Node.list()}" optionKey="id" value="${nodeInstance?.parent?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="parent" name="parent.id" from="${org.yana.Node.list()}" optionKey="id" value="${nodeInstance?.parent?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: nodeInstance, field: 'lastUpdated', 'error')} required">

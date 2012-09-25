@@ -22,7 +22,7 @@
 --%>
 
 
-<%@ page import="com.dtolabs.Project" %>
+<%@ page import="org.yana.Project" %>
 <!doctype html>
 <html>
 <head>

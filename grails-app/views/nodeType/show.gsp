@@ -1,5 +1,5 @@
 
-<%@ page import="com.dtolabs.NodeType" %>
+<%@ page import="org.yana.NodeType" %>
 <!doctype html>
 <html>
 	<head>
@@ -62,8 +62,8 @@
 									
 									<g:if test="${nodeTypeInstance?.attributes}">
 									<tr>
-										<g:each in="${com.dtolabs.NodeAttribute.findAllByNodetype(com.dtolabs.NodeType.get(nodeTypeInstance?.id), [sort:'attribute.name',order:'asc'])}" status="i" var="t">
-										<g:set var="attributeInstance" value="${com.dtolabs.Attribute.findAllById(t?.attribute?.id, [sort:'name',order:'asc'])}" />
+										<g:each in="${org.yana.NodeAttribute.findAllByNodetype(org.yana.NodeType.get(nodeTypeInstance?.id), [sort:'attribute.name',order:'asc'])}" status="i" var="t">
+										<g:set var="attributeInstance" value="${org.yana.Attribute.findAllById(t?.attribute?.id, [sort:'name',order:'asc'])}" />
 										
 										<tr>
 											<td><g:link controller="attribute" action="show" id="${attributeInstance.id[0]}"><b>${attributeInstance.name[0]} <g:if test="${t.required}">*</g:if></b></g:link></td>

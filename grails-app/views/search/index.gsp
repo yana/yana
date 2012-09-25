@@ -1,7 +1,7 @@
 <%@ page import="org.springframework.util.ClassUtils" %>
 <%@ page import="grails.plugin.searchable.internal.lucene.LuceneUtils" %>
 <%@ page import="grails.plugin.searchable.internal.util.StringQueryUtils" %>
-<%@ page import="com.dtolabs.Node" %>
+<%@ page import="org.yana.Node" %>
 <!doctype html>
 <html>
   <head>

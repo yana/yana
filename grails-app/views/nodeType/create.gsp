@@ -1,4 +1,4 @@
-<%@ page import="com.dtolabs.NodeType" %>
+<%@ page import="org.yana.NodeType" %>
 <!doctype html>
 <html>
 	<head>

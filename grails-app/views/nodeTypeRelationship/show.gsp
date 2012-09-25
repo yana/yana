@@ -1,5 +1,5 @@
 
-<%@ page import="com.dtolabs.NodeTypeRelationship" %>
+<%@ page import="org.yana.NodeTypeRelationship" %>
 <!doctype html>
 <html>
 	<head>

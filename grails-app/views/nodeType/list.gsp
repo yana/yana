@@ -1,5 +1,5 @@
 
-<%@ page import="com.dtolabs.NodeType" %>
+<%@ page import="org.yana.NodeType" %>
 <!doctype html>
 <html>
 	<head>
@@ -30,7 +30,7 @@
 						<td style="padding-left:5px;">${nodeTypeInstance.description}</td>
 						</g:else>
 						<td style="padding-left:5px;">(<g:link action="index" controller="search"
-                                                               params="${[q: 'nodetype:' + nodeTypeInstance.name]}">${com.dtolabs.Node.countByNodetype(nodeTypeInstance)}</g:link>)</td>
+                                                               params="${[q: 'nodetype:' + nodeTypeInstance.name]}">${org.yana.Node.countByNodetype(nodeTypeInstance)}</g:link>)</td>
 					</tr>
 				</g:each>
 				</tbody>
