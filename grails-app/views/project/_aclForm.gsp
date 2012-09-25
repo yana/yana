@@ -1,4 +1,4 @@
-<%@ page import="com.dtolabs.yana2.YanaConstants; com.dtolabs.yana2.springacl.YanaPermission; com.dtolabs.Project" %>
+<%@ page import="com.dtolabs.org.yana.YanaConstants; com.dtolorg.yana2ana2.springacl.YanaPermission; com.dtolabs.Project" %>
 
 <div >
     <div>

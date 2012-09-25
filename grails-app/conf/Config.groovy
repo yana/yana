@@ -1,4 +1,4 @@
-import com.dtolabs.yana2.YanaConstants
+import org.yana.YanaConstants
 // locations to search for config files that get merged into the main config
 // config files can either be Java properties files or ConfigSlurper scripts
 
@@ -175,11 +175,11 @@ grails.resources.modules = {
 }
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = "com.dtolabs.User"
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = "com.dtolabs.UserRole"
-grails.plugins.springsecurity.authority.className = "com.dtolabs.Role"
+grails.plugins.springsecurity.userLookup.userDomainClassName = "org.yana.User"
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = "org.yana.UserRole"
+grails.plugins.springsecurity.authority.className = "org.yana.Role"
 grails.plugins.springsecurity.rememberMe.persistent = true
-grails.plugins.springsecurity.rememberMe.persistentToken.domainClassName = "com.dtolabs.PersistentLogin"
+grails.plugins.springsecurity.rememberMe.persistentToken.domainClassName = "org.yana.PersistentLogin"
 
 
 grails.plugins.springsecurity.secureChannel.definition = [

@@ -1,14 +1,14 @@
 import org.springframework.security.acls.domain.DefaultPermissionFactory
-import com.dtolabs.yana2.springacl.YanaPermission
+import org.yana.springacl.YanaPermission
 
 import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider
 import org.springframework.security.web.authentication.preauth.j2ee.J2eePreAuthenticatedProcessingFilter
 import org.springframework.security.web.authentication.preauth.j2ee.J2eeBasedPreAuthenticatedWebAuthenticationDetailsSource
 
 import org.springframework.security.web.authentication.preauth.PreAuthenticatedGrantedAuthoritiesUserDetailsService
-import com.dtolabs.yana2.springsecurity.YanaAuthoritiesMapper
+import org.yana.springsecurity.YanaAuthoritiesMapper
 import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint
-import com.dtolabs.yana2.YanaConstants
+import org.yana.YanaConstants
 
 // Place your Spring DSL code here
 beans = {

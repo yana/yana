@@ -1,16 +1,16 @@
-import com.dtolabs.Role
-import com.dtolabs.User
-import com.dtolabs.UserRole
-import com.dtolabs.*
+import org.yana.Role
+import org.yana.User
+import org.yana.UserRole
+import org.yana.*
 import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
 import grails.util.Environment
 import org.springframework.security.core.context.SecurityContextHolder as SCH
 import org.springframework.security.core.authority.AuthorityUtils
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
-import com.dtolabs.yana2.springacl.YanaPermission
+import org.yana.springacl.YanaPermission
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 import org.codehaus.groovy.grails.plugins.springsecurity.SecurityFilterPosition
-import com.dtolabs.yana2.YanaConstants
+import org.yana.YanaConstants
 
 class BootStrap {
     def projectService
