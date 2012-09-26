@@ -53,11 +53,11 @@ class SearchController {
 
                 switch (params.format.toLowerCase()) {
                     case 'xml':
-                        def xml = xmlService.formatNodes(nodes)
+                        def xml = xmlService.formatNodes(nodes.collect{Node.get(it.id)})
                         render(text: xml, contentType: "text/xml")
                         break;
                     case 'json':
-                        def json = jsonService.formatNodes(nodes)
+                        def json = jsonService.formatNodes(nodes.collect {Node.get(it.id)})
                         render(text: json, contentType: "text/json")
                         break;
                 }
