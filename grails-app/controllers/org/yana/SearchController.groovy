@@ -32,10 +32,8 @@ class SearchController {
         if (!params.q?.trim()) {
             return [:]
         }
-        if(!params.sort){
-            params.sort='name'
-        }
-        if(!params.order){
+        params.sort='nameSort'
+        if(!(params.order in ['asc','desc'])){
             params.order='asc'
         }
         def Project proj=projectService.findProject(params.project)

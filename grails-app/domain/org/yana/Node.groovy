@@ -5,7 +5,10 @@ class Node {
     static searchable = {
         nodetype component:true
         project component:true
-        except=['version']
+        except=['version','tags']
+        name index: 'not_analyzed', name: 'nameSort'
+        name index: 'analyzed'
+        tagsTokens name: 'tags'
     }
 	
 	static mappedBy = [
@@ -23,6 +26,7 @@ class Node {
     Project project;
     Date dateCreated
     Date lastUpdated
+    static transients = ['tagsTokens','nameTokens']
 
     static constraints = {
         name(blank:false, unique: ['project', 'nodetype'])
@@ -30,6 +34,12 @@ class Node {
         tags(nullable:true)
 		nodetype(nullable:false)
         project(nullable: false)
+    }
+    def String getTagsTokens(){
+        return tags?tags.split(/[,\s]+/).join(' ').toString(): null
+    }
+    def String getNameTokens(){
+        return name.split(/\./).join(' ')
     }
 
     def String toString() {
