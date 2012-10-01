@@ -6,6 +6,7 @@ import javax.xml.validation.Validator
 import javax.xml.transform.stream.StreamSource
 import org.xml.sax.SAXException
 import grails.validation.ValidationException
+import org.springframework.security.access.prepost.PreAuthorize
 
 /**
  * Provides a model import service that takes file uploads
@@ -48,6 +49,7 @@ class ImportService {
      * @param xmlInput InputStream containing yana XML data
      * @param project Project to store the model data
      */
+    @PreAuthorize("hasPermission(#project, admin) or hasRole('ROLE_YANA_ADMIN') or hasRole('ROLE_YANA_SUPERUSER')")
     def load(InputStream xmlInput, Project project) {
         if (null == xmlInput) throw new IllegalArgumentException("XML content stream was null")
         if (null == project) throw new IllegalArgumentException("Project parameter was null")

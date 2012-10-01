@@ -179,6 +179,26 @@ class ProjectService {
         return aclUtilService.hasPermission(springSecurityService.authentication, p, YanaPermission.READ) || aclUtilService.hasPermission(springSecurityService.authentication, p, YanaPermission.ADMINISTRATION)
     }
 
+    /**
+     * Return true if the user has Admin permission for the project
+     * @param p
+     * @return
+     */
+    boolean hasAdminPermission(Project p) {
+        return aclUtilService.hasPermission(springSecurityService.authentication, p, YanaPermission.ADMINISTRATION)
+    }
+
+    /**
+     * Return true if the user has Admin permission for the project,
+     * but fail if not
+     * @param p
+     * @return
+     */
+    @PreAuthorize("hasPermission(#p, admin)")
+    boolean authorizedAdminPermission(Project p) {
+        return aclUtilService.hasPermission(springSecurityService.authentication, p, YanaPermission.ADMINISTRATION)
+    }
+
     @PreAuthorize("hasPermission(#p, delete) or hasPermission(#p, admin)")
     def deleteProject(Project p){
         def projectName=p.name
@@ -212,6 +232,15 @@ class ProjectService {
 
     @PostFilter("hasPermission(filterObject, read) or hasPermission(filterObject, admin)")
     def listProjects() {
+        return Project.list()
+    }
+
+    /**
+     * List projects for which the user had 'admin' permission
+     * @return Project list
+     */
+    @PostFilter("hasPermission(filterObject, admin)")
+    def listProjectsAdminPerm() {
         return Project.list()
     }
 

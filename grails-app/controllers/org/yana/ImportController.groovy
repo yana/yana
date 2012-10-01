@@ -4,7 +4,7 @@ package org.yana
 import grails.plugins.springsecurity.Secured
 import org.yana.Project
 
-@Secured(['ROLE_YANA_ADMIN', 'ROLE_YANA_SUPERUSER'])
+@Secured(['isAuthenticatedFully()'])
 class ImportController {
 
     def springSecurityService
@@ -25,7 +25,7 @@ class ImportController {
     }
 
     def importxml() {
-        [projectList: projectService.listProjects()]
+        [projectList: projectService.listProjectsAdminPerm()]
     }
 
     /**
