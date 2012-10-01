@@ -4,7 +4,7 @@ package org.yana
 import grails.plugins.springsecurity.Secured
 import org.yana.Project
 
-@Secured(['isAuthenticatedFully()'])
+@Secured(['isFullyAuthenticated()'])
 class ImportController {
 
     def springSecurityService
