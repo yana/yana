@@ -13,7 +13,6 @@ import org.yana.Project
 import org.yana.Attribute
 import org.yana.NodeAttribute
 
-@Secured(['ROLE_YANA_ADMIN', 'ROLE_YANA_USER', 'ROLE_YANA_ARCHITECT', 'ROLE_YANA_SUPERUSER'])
 @DefaultProjectAccess(ProjectAccess.Level.architect)
 class NodeTypeController {
 

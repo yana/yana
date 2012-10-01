@@ -6,7 +6,7 @@ import org.yana.User
 import grails.plugins.springsecurity.Secured
 import java.util.Date;
 
-@Secured(['ROLE_YANA_ADMIN','ROLE_YANA_USER','ROLE_YANA_ARCHITECT','ROLE_YANA_SUPERUSER'])
+@Secured(['isAuthenticated()'])
 class WebhookController {
 
 	def springSecurityService

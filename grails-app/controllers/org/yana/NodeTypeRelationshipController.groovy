@@ -8,7 +8,6 @@ import org.yana.springacl.DefaultProjectAccess
 import org.yana.NodeTypeRelationship
 import org.yana.NodeType
 
-@Secured(['ROLE_YANA_ADMIN','ROLE_YANA_ARCHITECT','ROLE_YANA_SUPERUSER','ROLE_YANA_USER'])
 @DefaultProjectAccess(ProjectAccess.Level.architect)
 class NodeTypeRelationshipController {
 

@@ -8,7 +8,6 @@ import org.yana.springacl.DefaultProjectAccess
 import org.yana.springacl.ProjectAccess
 import org.yana.Project
 
-@Secured(['ROLE_YANA_ADMIN', 'ROLE_YANA_USER', 'ROLE_YANA_ARCHITECT', 'ROLE_YANA_SUPERUSER'])
 @DefaultProjectAccess(ProjectAccess.Level.read)
 class SearchController {
 

@@ -4,7 +4,7 @@ import grails.plugins.springsecurity.Secured
 
 import org.yana.Project
 
-@Secured(['ROLE_YANA_USER', 'ROLE_YANA_ARCHITECT', 'ROLE_YANA_ADMIN', 'ROLE_YANA_SUPERUSER'])
+@Secured(['isAuthenticated()'])
 class ProjectController {
     static allowedMethods = [delete: 'POST']
 

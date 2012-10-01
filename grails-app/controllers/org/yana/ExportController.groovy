@@ -6,7 +6,6 @@ import org.yana.springacl.ProjectAccess
 import org.yana.Project
 
 
-@Secured(['ROLE_YANA_ADMIN', 'ROLE_YANA_SUPERUSER'])
 @DefaultProjectAccess(ProjectAccess.Level.read)
 class ExportController {
     def springSecurityService

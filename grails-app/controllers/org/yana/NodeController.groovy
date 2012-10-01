@@ -10,7 +10,6 @@ import org.yana.ChildNode
 import org.yana.NodeAttribute
 import org.yana.NodeValue
 
-@Secured(['ROLE_YANA_ADMIN', 'ROLE_YANA_USER', 'ROLE_YANA_ARCHITECT', 'ROLE_YANA_SUPERUSER'])
 @DefaultProjectAccess(ProjectAccess.Level.operator)
 class NodeController {
     def iconService
