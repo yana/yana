@@ -110,6 +110,7 @@ class YanaAuthoritiesMapper extends MapBasedAttributes2GrantedAuthoritiesMapper 
         Assert.isTrue(allRoles.containsValue(YanaConstants.ROLE_ARCHITECT), YanaConstants.ROLE_ARCHITECT + ' was not mapped by a container role')
         Assert.isTrue(allRoles.containsValue(YanaConstants.ROLE_SUPERUSER), YanaConstants.ROLE_SUPERUSER + ' was not mapped by a container role')
         Assert.isTrue(allRoles.containsValue(YanaConstants.ROLE_USER), YanaConstants.ROLE_USER + ' was not mapped by a container role')
+        log.debug("Setting granted authorities map: ${allRoles}")
         setAttributes2grantedAuthoritiesMap(allRoles)
     }
 
