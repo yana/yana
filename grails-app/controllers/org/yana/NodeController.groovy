@@ -170,6 +170,7 @@ class NodeController {
         if (params.action == 'api') {
             response.status = 200
             if (params.format && params.format != 'none') {
+                ArrayList nodes = [nodeInstance]
                 switch (params.format.toLowerCase()) {
                     case 'xml':
                         def xml = xmlService.formatNodes(nodes)
@@ -242,6 +243,8 @@ class NodeController {
 
         if (params.action == 'api') {
             response.status = 200
+            ArrayList nodes = [nodeInstance]
+
             if (params.format && params.format != 'none') {
                 switch (params.format.toLowerCase()) {
                     case 'xml':
